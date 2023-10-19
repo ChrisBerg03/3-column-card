@@ -7,6 +7,8 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .whole {
@@ -14,30 +16,33 @@ body {
     height: 500px;
     display: flex;
     flex-direction: row;
-    margin: 0 auto;
+
 }
 
 .column1 {
     background-color: #E28625;
-    width: 307px;
-    height: 500px;
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
 }
 
 .column2 {
     background-color: #006971;
-    width: 307px;
-    height: 500px;
+
 }
 
 .column3 {
     background-color: #004140;
-    width: 307px;
-    height: 500px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .column1, .column2, .column3 {
     display: flex;
     flex-direction: column;
+    flex-shrink: 0;
+    width: 307px;
+    height: 500px;
+    position: relative;
 }
 
 button {
@@ -46,13 +51,15 @@ button {
     border-radius: 25px;
     border: none;
     left: 48px;
-    position: relative;
-    display: flex;
-
+    position: absolute;
+    font-size: 15px;
+    font-weight: 400;
+    bottom: 48px;
 }
 
 .column-1-button {
     color: #E28625;
+
 }
 .column-2-button {
     color: #006971;
@@ -61,24 +68,75 @@ button {
     color: #004140;
 }
 
-h1, p {
-    left: 48px;
-    position: relative;
-
-}
 
 h1 {
     top: 123px;
+    left: 48px;
+    position: absolute;
+    margin: 0;
 }
 
 p {
     margin: 0;
     width: 212px;
-    margin-top: 196px;
+    height: 125px;
     font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    position: absolute;
+    left: 48px;
+    top: 196px;
+    line-height: 25px;
+
 }
 
 button, h1 {
     font-family: 'Big Shoulders Display', sans-serif;
+
+}
+
+.car-icon {
+    position: relative;
+    top: 48px;
+    left: 48px;
+}
+
+/* small (S)*/
+@media (min-width: 640px) {
+
+}
+
+/* Medium (M)*/
+@media (min-width: 768px) {
+}
+
+
+/* large (L) */
+@media (max-width: 1024px) {
+    .whole {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .column1 {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    
+    .column3 {
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+}
+
+/* x-Large (xl) */
+@media (min-width: 1280px) {
+
+}
+
+/* xx-Large (xxl)*/
+@media (min-width: 1536px) {
 
 }
